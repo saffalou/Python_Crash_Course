@@ -14,7 +14,7 @@ lst1=[1,2,3,4,5]
 lst2 = [number for number in lst1]
 print(lst2)
 
-#or
+#or, more direct way
 lst2_a = [value+1 for value in range(0, 5)]   
 print(lst2_a)
 
