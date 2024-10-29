@@ -70,3 +70,62 @@ words_meanings = {
 
 for word, meaning in words_meanings.items():
     print(f"{word} : {meaning} \n")
+
+
+# 6-5. Rivers: Make a dictionary containing three major rivers and the country each river runs through. 
+# One key-value pair might be 'nile': 'egypt'. 
+# Use a loop to print a sentence about each river, such as The Nile runs through Egypt.
+# Use a loop to print the name of each river included in the dictionary. 
+# Use a loop to print the name of each country included in the dictionary.
+
+rivers = {
+    'Nile': 'Egypt',
+    'Amazon': 'Brazil, Peru, Colombia',
+    'Yangtze': 'China',
+}
+
+for river, country in rivers.items():
+    print(f"The {river} runs through {country}.")
+
+
+for river in rivers.keys():
+    print(river)
+
+
+for country in rivers.values():
+    print(country)
+
+# Polling: Use the code in favorite_languages.py (page 96). 
+# Make a list of people who should take the favorite languages poll. 
+# Include some names that are already in the dictionary and some that are not. 
+# Loop through the list of people who should take the poll. 
+# If they have already taken the poll, print a message thanking them for responding. 
+# If they have not yet taken the poll, print a message inviting them to take the poll.
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python',
+    'david': 'c++',
+    'james': 'c++',
+    'leon': 'python',
+    'sophie': 'rust',
+    }
+
+poll_completed = ['sarah', 'phil', 'sophie']
+# loop through the list of people who should take the poll
+for people in favorite_languages.keys():
+    print(f"Dear {people.title()}, we have sent you a poll we would like you to complete..")
+print('\n')
+
+# now let's allow for poll completion and non-completion
+for people in favorite_languages.keys():
+    if people in poll_completed:
+        print(f"Thank you for completing our poll {people.title()}!")
+    else:
+        print(f"Dear {people.title()} we recently sent you a poll for completion. We would really appreciate if you could complete it.")
+
+
+
+
